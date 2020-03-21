@@ -12,12 +12,18 @@ inputKeys = ["datetime","city","state","country","shape"];
 // function to return true or false if input element has a value
 function checkInput(id) {
     var inputElement = d3.select(id);
+    // console.log("inputElement",inputElement);
+
     var inputValue = inputElement.property("value");
-    if (inputValue === "" || inputValue === null) {
+    console.log("inputValue",inputValue);
+
+    if (inputValue == "" || inputValue == null) {
+        console.log(`id ${id} is  blank`);
         return false;
     }
     else{
-        return true;
+        console.log(`id ${id} is not blank`)
+        return id;
     }
 }
 
@@ -26,18 +32,35 @@ function filterData(id,key,dataset) {
     var inputElement = d3.select(id);
     
     var inputValue = inputElement.property("value");
-    console.log(inputValue);
+    // console.log(inputValue);
 
     var filteredData = dataset.filter(sighting => sighting[key] === inputValue);
-    console.log(filteredData);
+    console.log("filterData loop:",filteredData);
 
     return filteredData;
 }
 
 button.on("click", function(){
 
+    var activeInputs = [];
 
-    var tableData = filterData("#datetime","datetime",ufoData);
+    activeInputs = inputIds.map((id) => checkInput(id));
+    console.log("activeInputs: ",activeInputs);
+
+    // Initialize tableData with entire ufoData set
+    var tableData = ufoData;
+
+    activeInputs.forEach((input) => {
+        if(input){
+            keyVal = input.slice(1);
+            console.log(`keyVal: ${keyVal}, input: ${input}`);
+            
+            tableData = filterData(input,keyVal,tableData);
+        }
+
+    });
+
+    // var tableData = filterData("#datetime","datetime",ufoData);
     // console.log(tableData);
     // Clear any rows and cells from prior taby (if any)
     tbody.html("");
