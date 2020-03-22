@@ -170,6 +170,11 @@ select {
   color: darkorange;
 }
 
+.btn {
+  margin-bottom: 15px; 
+  border-radius: 8px;
+}
+
 /* input placeholder color changes */
 .form-control::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
