@@ -17,7 +17,7 @@ You can handle this... right? The planet Earth needs to know what we have found!
 
 * Using a basic HTML page [index.html](UFO-level-1/index.html) provided it was hosted here: [UFO level 1 site](https://kipmadden.github.io/javascript-challenge/UFO-level-1/index.html) 
 
-* Using the UFO dataset provided in the form of an array of JavaScript objects, code was written that appends a table to the web page and new rows of data were added for each UFO sighting that are searched based on a search date of the format `1/1/2010`
+* Using the [UFO dataset](UFO-level-1/static/js/data.js) provided in the form of an array of JavaScript objects, code was written that appends a table to the web page and new rows of data were added for each UFO sighting that are searched based on a search date of the format `1/1/2010`
 
   * Columns for `date/time`, `city`, `state`, `country`, `shape`, and `comment` were provided
 
