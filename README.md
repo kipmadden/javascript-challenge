@@ -17,7 +17,7 @@ You can handle this... right? The planet Earth needs to know what we have found!
 
 * Using a basic HTML page [index.html](UFO-level-1/index.html) provided it was hosted here: [UFO level 1 site](https://kipmadden.github.io/javascript-challenge/UFO-level-1/index.html) 
 
-* Using the [UFO dataset](UFO-level-1/static/js/data.js) provided in the form of an array of JavaScript objects, code was written that appends a table to the web page and new rows of data were added for each UFO sighting that are searched based on a search date of the format `1/1/2010`
+* Using the [UFO dataset](UFO-level-1/static/js/data.js) provided in the form of an array of JavaScript objects, [Javascript code](UFO-level-1/static/js/app.js) was written that appends a table to the web page and new rows of data were added for each UFO sighting that are searched based on a search date of the format `1/1/2010`
 
   * Columns for `date/time`, `city`, `state`, `country`, `shape`, and `comment` were provided
 
@@ -27,7 +27,7 @@ You can handle this... right? The planet Earth needs to know what we have found!
 
 * The same basic HTML page [index.html](UFO-level-2/index.html) was used and hosted here: [UFO level 2 site](https://kipmadden.github.io/javascript-challenge/UFO-level-2/index.html) 
 
-* Multiple `input` fields were used along with JavaScript code so the user can filter and search for UFO sightings using the following criteria based on the table columns:
+* Multiple `input` fields were used along with [Javascript code](UFO-level-2/static/js/app.js) so the user can filter and search for UFO sightings using the following criteria based on the table columns:
 
   1. `date/time`
   2. `city`
