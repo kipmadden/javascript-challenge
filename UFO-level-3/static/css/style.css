@@ -41,6 +41,10 @@ body {
 .navbar {
   padding: 5px;
   margin: 0;
+  background-color: black;
+  height: 25px;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* This CSS styles the ufo icon in the navbar */
@@ -49,7 +53,28 @@ body {
   bottom: 5px;
   left: 150px;
   width: 35px;
+  color: white; 
+}
+
+.view_port {
+  background-color: black;
+  height: 55px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cylon_eye {
+  background-color: rgb(0, 255, 55);
+  background-image: linear-gradient(to right,
+      rgba(0, 0, 0, .9) 25%,
+      rgba(0, 0, 0, .1) 50%,
+      rgba(0, 0, 0, .9) 75%);
   color: white;
+  height: 100%;
+  width: 20%;
+
+  -webkit-animation: 4s linear 0s infinite alternate move_eye;
+          animation: 4s linear 0s infinite alternate move_eye;
 }
 
 /* Adding styles to the aside and filter form */
@@ -88,17 +113,17 @@ select {
 }
 
 .margin-top-50 {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 /* The styles for the parallax */
 .hero {
   position: relative;
-  height: 550px;
+  height: 1050px;
   padding: 20px;
   margin: 0;
   background: black;
-  background-image: url("../images/nasa.jpg");
+  background-image: url("../images/earth_with_ufo_resized.jpg");
   background-attachment: fixed;
   background-position: bottom center;
   background-size: cover;
@@ -223,3 +248,6 @@ select {
     opacity: 1;
   }
 }
+
+@-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+        @keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
