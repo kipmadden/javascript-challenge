@@ -56,6 +56,32 @@ body {
   color: white; 
 }
 
+.wrapper2{
+  position: absolute;
+  width: 100%;
+}
+
+.moving-ufo{
+  position: absolute;
+  width: 100px;
+  z-index: 10;
+  left: 18%;
+  animation: moveUfo 9s ease-in-out forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+@keyframes moveUfo{
+  0% {
+  left: 18%;
+  }
+  100% {
+  left: 110%;
+  }
+}
+
+
 .view_port {
   background-color: black;
   height: 55px;
@@ -63,7 +89,7 @@ body {
   overflow: hidden;
 }
 
-.cylon_eye {
+.alien_scan {
   background-color: rgb(0, 255, 55);
   background-image: linear-gradient(to right,
       rgba(0, 0, 0, .9) 25%,
@@ -73,8 +99,8 @@ body {
   height: 100%;
   width: 20%;
 
-  -webkit-animation: 4s linear 0s infinite alternate move_eye;
-          animation: 4s linear 0s infinite alternate move_eye;
+  -webkit-animation: 4s linear 0s infinite alternate alien_eye;
+          animation: 4s linear 0s infinite alternate alien_eye;
 }
 
 /* Adding styles to the aside and filter form */
@@ -133,6 +159,7 @@ select {
   margin-top: 200px;
   font-size: 0.1rem;
   animation: title 1.2s forwards linear;
+  color: chartreuse;
 }
 
 .hero p {
@@ -140,6 +167,7 @@ select {
   opacity: 0;
   animation: subtitle 1.2s forwards linear;
   animation-delay: 1.2s;
+  color: darkorange;
 }
 
 /* input placeholder color changes */
@@ -249,5 +277,6 @@ select {
   }
 }
 
-@-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
-        @keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+
+@-webkit-keyframes alien_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+        @keyframes alien_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
